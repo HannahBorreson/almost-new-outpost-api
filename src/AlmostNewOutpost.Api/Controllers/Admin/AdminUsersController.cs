@@ -8,10 +8,10 @@ namespace AlmostNewOutpost.Api.Controllers.Admin
 {
     [ApiController]
     [Route("api/admin/users")]
-    public class AdminUseresController : ControllerBase
+    public class AdminUsersController : ControllerBase
     {
         private readonly OutpostDbContext _db;
-        public AdminUseresController(OutpostDbContext db)
+        public AdminUsersController(OutpostDbContext db)
         {
             _db = db;
         }
