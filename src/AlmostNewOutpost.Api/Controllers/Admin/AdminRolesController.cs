@@ -1,9 +1,7 @@
 ﻿using AlmostNewOutpost.Api.Data;
-using AlmostNewOutpost.Api.Models.Entities;
-using Microsoft.EntityFrameworkCore;
 using AlmostNewOutpost.Api.Models.Responses;
 using Microsoft.AspNetCore.Mvc;
-using Org.BouncyCastle.Asn1.Cms;
+using Microsoft.EntityFrameworkCore;
 
 
 namespace AlmostNewOutpost.Api.Controllers.Admin
@@ -39,5 +37,5 @@ namespace AlmostNewOutpost.Api.Controllers.Admin
 }
 
 
-    
-}
+
+

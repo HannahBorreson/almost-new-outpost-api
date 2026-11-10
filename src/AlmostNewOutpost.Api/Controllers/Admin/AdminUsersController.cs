@@ -1,22 +1,16 @@
-﻿using AlmostNewOutpost.Api.Models.Responses;
+﻿using AlmostNewOutpost.Api.Data;
+using AlmostNewOutpost.Api.Models.Responses;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using AlmostNewOutpost.Api.Data;
-using AlmostNewOutpost.Api.Models.Entities;
 
 namespace AlmostNewOutpost.Api.Controllers.Admin
 {
     [ApiController]
-    [Route("api/admin/users")]
-    public class AdminUsersController : ControllerBase
+    [Route("api/admin/users/")]
+    public class AdminUsersController(OutpostDbContext db) : ControllerBase
     {
-        private readonly OutpostDbContext _db;
-        public AdminUsersController(OutpostDbContext db)
-        {
-            _db = db;
-        }
-    
-        
+        private readonly OutpostDbContext _db = db;
+
         [HttpGet]
         public async Task<ActionResult<List<AdminUserDto>>> GetAll([FromQuery] bool includeArchived = false)
         {
